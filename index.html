@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>김시은 Portfolio 2023</title>
+
+  <!-- slick -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <div class="progress" id="progress">
+    <span class="progress-bar"></span>
+    <span class="progress-text">0%</span>
+  </div>
+
+  <!-- <div class="text">0</div> -->
+
+  <div class="notice">
+    <h1>Notice!</h1>
+    <p>
+      본 사이트는 포트폴리오용으로<br />
+      1920 x 1080 해상도에 최적화되어있습니다.
+    </p>
+    <div class="notice_one">
+      <input type="checkbox" id="cb">
+      <label href="#" class="hide" for="cb">1분간 보이지 않기</label>
+    </div>
+    <a href="#" class="Nclose">
+      <i class="fas fa-times-circle"></i>
+    </a>
+  </div>
+
+  <div class="main_wrap" data-0="opacity:1" data-800="opacity:1">
+    <header class="header">
+      <a href="#" class="header-logo">
+        <img src="https://zajno-storage0.s3.us-west-1.amazonaws.com/dev/codepen/wonderland/logo.svg" alt="">
+      </a>
+      <div class="header-menu">
+        <a href="#" class="header-item">HOME</a>
+        <a href="#intro" class="header-item"  onclick="gotoAbout();">ABOUT ME</a>
+        <a href="#travle" class="header-item"  onclick="gotoTravel();">HOBBY</a>
+        <a href="#section1" class="header-item" onclick="gotoWork();">WORKS</a>
+      </div>
+      <button class="header-burger">
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+    <div class="cursor">
+      <button class="main_me-cursor">
+        scroll
+        <svg viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10.1047 6.08511L11 7.05319L5.5 13L1.02459e-06 7.05319L0.895301 6.08511L4.86046 10.3723L4.86046 -1.02689e-06L6.13953 -1.01163e-06L6.13953 10.3723L10.1047 6.08511Z"
+            fill="white" />
+        </svg>
+
+      </button>
+    </div>
+    <main class="main">
+      <div class="smooth-wrapper">
+        <div id="smooth-content">
+          <section id="hero" class="hero">
+            <button id="close-collection" class="hero-close">Back</button>
+            <div class="main_me">
+              <h1 class="main_me-title">
+                <span>K</span>
+                <span>I</span>
+                <span>M</span>
+                <span></span>
+                <span>S</span>
+                <span>E</span>
+                <span>E</span>
+                <span></span>
+                <span>E</span>
+                <span>U</span>
+                <span>N</span>
+              </h1>
+              <div class="main_me-line line-stroke">
+                <div class="line-stroke__wrapp">
+                  <div class="line-stroke__item line-stroke__1">
+                    <div>portfoilo / portfoilo / portfoilo</div>
+                    <div>portfoilo / portfoilo / portfoilo</div>
+                    <div>portfoilo / portfoilo / portfoilo</div>
+                  </div>
+                  <div class="line-stroke__item line-stroke__2">
+                    <div>portfoilo / portfoilo / portfoilo</div>
+                    <div>portfoilo / portfoilo / portfoilo</div>
+                    <div>portfoilo / portfoilo / portfoilo</div>
+                  </div>
+                </div>
+              </div>
+              <div class="main_me-descr" split-lines>Welcome to visit my portfolio!
+              </div>
+
+            </div>
+            <div class="banner mirror-wrapp">
+              <div class="banner-img">
+                <img src="img/bgi1.jpg" alt="">
+              </div>
+              <div class="mirror">
+                <div class="mirror-main">
+                  <div class="mirror-item mirror-left">
+                    <div class="mirror-img mirror-img__mask">
+                      <img src="img/bgi2.jpg" alt="">
+                    </div>
+                    <div class="mirror-img">
+                      <img src="img/bgi3.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="mirror-item mirror-center">
+                    <div class="mirror-img mirror-img__mask">
+                      <img src="img/bgi1.jpg" alt="">
+                    </div>
+                    <div class="mirror-img">
+                      <img src="img/bgi2.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="mirror-item mirror-right">
+                    <div class="mirror-img mirror-img__mask">
+                      <img src="img/bgi3.jpg" alt="">
+                    </div>
+                    <div class="mirror-img">
+                      <img src="img/bgi2.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="mirror-additional">
+                  <div class="mirror-item mirror-over mirror-over__left">
+                    <div class="mirror-img mirror-img__left">
+                      <img src="img/bgi1.jpg" alt="">
+                      <div class="mirror-light"></div>
+                    </div>
+                    <div class="mirror-img mirror-img__main">
+                      <img src="img/bgi3.jpg" alt="">
+                    </div>
+                    <div class="mirror-img mirror-img__right">
+                      <img src="img/bgi2.jpg" alt="">
+                      <div class="mirror-light"></div>
+                    </div>
+                  </div>
+                  <div class="mirror-item mirror-over mirror-over__center">
+                    <div class="mirror-img mirror-img__left">
+                      <img src="img/bgi3.jpg" alt="">
+                      <div class="mirror-light"></div>
+                    </div>
+                    <div class="mirror-img mirror-img__main">
+                      <img src="img/bgi1.jpg" alt="">
+                    </div>
+                    <div class="mirror-img mirror-img__right">
+                      <img src="img/bgi3.jpg" alt="">
+                      <div class="mirror-light"></div>
+                    </div>
+                  </div>
+                  <div class="mirror-item mirror-over mirror-over__right">
+                    <div class="mirror-img mirror-img__left">
+                      <img src="img/bgi3.jpg" alt="">
+                      <div class="mirror-light"></div>
+                    </div>
+                    <div class="mirror-img mirror-img__main">
+                      <img src="img/bgi2.jpg" alt="">
+                    </div>
+                    <div class="mirror-img mirror-img__right">
+                      <img src="img/bgi3.jpg" alt="">
+                      <div class="mirror-light"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- //smooth-content -->
+        </div><!-- //smooth-wrapper -->
+    </main>
+    <section class="aboutwt">
+      <div class="about">
+        <div class="about_me">
+          <!-- <div class="overmouse"></div> -->
+          <div class="about_me_wrapper">
+            <div class="project-list">
+              <div class="project p-1">
+                <div class="project-overlay" data-300="opacity:0" data-400="opacity:1;">
+                  <div class="project_title">
+                    <h2><a href="#">Thank you for your precious time.</a></h2>
+                  </div>
+                  <!-- <div class="project-categ">HOVER!</div> -->
+                </div>
+              </div> <!-- //p-1 -->
+              <div class="project p-2">
+                <div class="project-overlay" data-400="opacity:0" data-500="opacity:1;">
+                  <div class="project_title">
+                    <h2><a href="#">Let me introduce my portfolio now</a></h2>
+                  </div>
+                  <!-- <div class="project-categ">HOVER</div> -->
+                </div>
+              </div> <!-- //p-2 -->
+              <div class="project p-3">
+                <div class="project-overlay" data-500="opacity:0" data-600="opacity:1;">
+                  <div class="project_title">
+                    <h2><a href="#">The First Step for New Web Publishers </a></h2>
+                  </div>
+                  <!-- <div class="project-categ">HOVER</div> -->
+                </div>
+              </div> <!-- //p-3 -->
+              <div class="project p-4">
+                <div class="project-overlay" data-600="opacity:0" data-700="opacity:1;">
+                  <div class="project_title">
+                    <h2><a href="#">I'll start</a></h2>
+                  </div>
+                  <!-- <div class="project-categ">HOVER</div> -->
+                </div>
+              </div> <!-- //p-4 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div><!-- //main_wrap -->
+
+
+  <section id="intro" class="intro" data-800="opacity:0" data-900="opacity:1;" data-1000="opacity:1; position:relative"
+    data-1400="opacity:1; position:fixed " data-2500="opacity:1" data-2600="opacity:0;">
+
+    <div class="Chapter1_tit">
+      <span>Chapter 1.</span>
+      <h1 class="Chapter1_title" data-text="About me"> About me</h1>
+    </div>
+    <div class="intro_seeeun_wrap">
+      <div class="intro_seeeun_left">
+        <div class="tilt_wrap" data-1000="position: relative; left:-3000px" data-1800="position: relative; left:0px">
+          <div class="tiltEle">
+            <div class="seeeunyuchea"><img src="img/profile1.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="brlineY"></div>
+      <div class="intro_seeeun_right">
+        <div class="h1rop" data-1000="position: absolute; right:-3000px" data-1800="position: absolute; right:45%">
+          <div class="profile_box">
+            <div class="profile_txt">
+              NAME
+              <span>김시은</span>
+            </div>
+            <div class="profile_txt">
+              BIRTH
+              <span>1995.06.06</span>
+            </div>
+            <div class="profile_txt">
+              PHONE
+              <span>010.5822.4366</span>
+            </div>
+            <div class="profile_txt">
+              EMAIL
+              <span>seeeeun@naver.com</span>
+              <div class="brlin"></div>
+            </div>
+            <div class="profile_txt">
+              CAREER <br>
+              <span class="day">2014.02</span>
+              부산 여자대학교 호텔경영학과 졸업 <br>
+              <span class="day">2015.04 ~ .2015.12</span>
+              부산 신세계 면세점 &lt;겔랑&gt; 근무 <br>
+              <span class="day">2016.01 ~ 2017.04</span>
+              롯데백화점 동래점 안내데스크 근무 <br>
+              <span class="day">2018.01 ~ 2019.09</span>
+              와이파이 도시락 김해공항점 근무 <br>
+              <span class="day">2019.10 ~ 2021.01</span>
+              혼다자동차 부산점 서비스센터 근무 <br>
+              <span class="day">2021.03 ~ 2023.03</span>
+              키자니아 부산 근무 <br>
+              <span class="day">2021.09 ~ 2022.02</span>
+              [그린컴퓨터아카데미]반응형 웹디자인(UIUX) & 웹퍼블리셔 디지털 실무 양성과정 수료 <br>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill_bars" data-1000="position:relative; bottom:-2000px"
+          data-2000="position:relative; bottom:-650px">
+          <div class="skills">
+            <div class="skill">
+              <div class="skill-name">HTML</div>
+              <div class="skill-bar">
+                <div class="skill-per" per="90"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill-name">CSS</div>
+              <div class="skill-bar">
+                <div class="skill-per" per="95"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill-name">JavaScript</div>
+              <div class="skill-bar">
+                <div class="skill-per" per="75"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="intro_seeeun_side">
+      <div class="rgb">
+        <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
+        <nav>
+          <a href="#" class="main-nav prev" data-nav="previous">
+            <i class="fas fa-chevron-left"></i><span></span></a>
+          <a href="#" class="main-nav next" data-nav="next">
+            <i class="fas fa-chevron-right"></i> <span></span></a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="myHobby" id="travle" data-2200="opacity:0; " data-2600="opacity:1; transform:translateY(100%)"
+    data-4000="opacity:1; position:fixed; transform:translateY(0%)" data-5500="opacity:1; ">
+    <div class="Chapter2_tit">
+      <span>Chapter 2.</span>
+      <h1 class="Chapter2_title" data-text="My Hobby"> My Hobby</h1>
+      <h2 class="hobbyment">저는 활동적인 것을 좋아합니다. <br />한달에 한두번 여행을 가거나, 쉬는 날 다양한 활동을 하는 것이 저의 스트레스 해소법 중 하나입니다. </h2>
+    </div>
+
+
+    <div class="autoplay" data-0="opacity:0" data-3000="opacity:0" data-4000="opacity:1">
+      <div class="frame1"><img src="img/acti2.jpg" alt="이미지" class="hobbyacti"></div>
+      <div class="frame1"><img src="img/acti10.jpg" alt="이미지" class="hobbyacti"></div>
+      <div class="frame1"><img src="img/acti9.jpg" alt="이미지" class="hobbyacti"></div>
+      <div class="frame1"><img src="img/acti19.jpg" alt="이미지" class="hobbyacti"></div>
+      <div class="frame1"><img src="img/acti1.jpg" alt="이미지" class="hobbyacti"></div>
+      <div class="frame1"><img src="img/acti3.jpg" alt="이미지" class="hobbyacti"></div>
+      <div class="frame1"><img src="img/acti4.jpg" alt="이미지" class="hobbyacti"></div>
+      <div class="frame1"><img src="img/acti5.jpg" alt="이미지" class="hobbyacti"></div>
+      <div class="frame1"><img src="img/acti6.jpg" alt="이미지" class="hobbyacti"></div>
+    </div>
+  </section>
+
+  <div class="bigseeeun" data-3800="opacity:0;transform:translateY(100%)"
+    data-4200="opacity:1; position:fixed;transform:translateY(0%)"
+    data-6600="opacity:1; position:fixed;transform:translateY(0%)" data-6700="opacity:0; position:relative;">
+    <img src="img/snow.png" alt="이미지" class="snow">
+  </div>
+
+  <section class="Myhobby2" data-5200="opacity:0;transform:translateY(100%) " data-5600="opacity:1; "
+    data-6000="opacity:1; position:fixed; transform:translateY(0%)" data-8500="opacity:1; ">
+    <h1 class="myf" data-6000="opacity:0; transform:scale(0)" data-6800="opacity:1; transform:scale(1)">My favorite
+    </h1>
+    <div class="mainimg1" data-5000="opacity:0;right:-50%" data-6500="opacity:1;right:-20%">
+      <img src="img/beersen.png" alt="이미지" class="beergirl1"></div>
+
+    <div class="mainimg2" data-4800="opacity:0; left:-50%" data-6200="opacity:1; left:-9%">
+      <img src="img/brse1.png" alt="이미지" class="beergirl2"></div>
+
+    <div class="mainimg3" data-5500="opacity:0;left:-100%" data-6500="opacity:1; left:8%">
+      <img src="img/brse2.png" alt="이미지" class="beergirl3"></div>
+    <div class="menttt">
+      <h1>제 취미는 맥주입니다.<br />세계 맥주를 즐기고 맥주를 기억할 수 있도록<br />
+        그 날 있었던 간단한 에피소드와 맥주의 맛을 인스타그램 스토리에 공유하는 편입니다.</h1>
+    </div>
+    <div class="instagram" data-6500="opacity:0; " data-6800="opacity:1; ">
+      <img src="img/101.png" alt="스토리" class="instastory insta1"></div>
+
+    <div class="instagram" data-6700="opacity:0; " data-7000="opacity:1; ">
+      <img src="img/102.png" alt="스토리" class="instastory insta2"></div>
+
+    <div class="instagram" data-6800="opacity:0; " data-7200="opacity:1; ">
+      <img src="img/103.png" alt="스토리" class="instastory insta3"></div>
+
+    <div class="instagram" data-6900="opacity:0; " data-7400="opacity:1; ">
+      <img src="img/104.png" alt="스토리" class="instastory insta4"></div>
+
+    <div class="instagram" data-7000="opacity:0; " data-7200="opacity:1; ">
+      <img src="img/15.png" alt="스토리" class="instastory insta5"></div>
+
+    <div class="instagram" data-7100="opacity:0; " data-7400="opacity:1; ">
+      <img src="img/106.png" alt="스토리" class="instastory insta6"></div>
+
+    <div class="instagram" data-7200="opacity:0; " data-7600="opacity:1; ">
+      <img src="img/107.png" alt="스토리" class="instastory insta7"></div>
+
+    <div class="instagram" data-7300="opacity:0; " data-7800="opacity:1; ">
+      <img src="img/108.png" alt="스토리" class="instastory insta8"></div>
+
+    <div class="instagram" data-7400="opacity:0; " data-8000="opacity:1; ">
+      <img src="img/109.png" alt="스토리" class="instastory insta9"></div>
+
+    <div class="instagram" data-7500="opacity:0; " data-8200="opacity:1; ">
+      <img src="img/111.png" alt="스토리" class="instastory insta11"></div>
+
+    <div class="instagram" data-7600="opacity:0; " data-8400="opacity:1; ">
+      <img src="img/112.png" alt="스토리" class="instastory insta12">
+    </div>
+  </section>
+
+  <section class="workwork" id="wofol" data-8200="opacity:0;transform:translateY(100%) " data-8500="opacity:1; "
+    data-9300="opacity:1; position:fixed; transform:translateY(0%)" data-12000="opacity:1; ">
+    <div class="Chapter1_tit">
+      <span>Chapter 3.</span>
+      <h1 class="Chapter1_title" data-text="My portfolio">My portfolio</h1>
+    </div>
+    <div class="back_title">
+      <h1 data-9500="opacity:0; transform:translateX(100%)" data-10000="opacity:1;transform:translateX(20%)">Portfolio
+      </h1>
+    </div>
+
+    <div id="section1" class="history">
+      <div class="history_story" data-9200="opacity:0; transform:translateX(-100%)"
+        data-10000="opacity:1;transform:translateX(0%)">
+        <div class="container">
+          <div class="history_slide_wrap">
+            <div class="history_slide">
+
+
+              <div class="Pdevice Pdevice1">
+                <div class="Pmonitor_wrap1">
+                  <div class="wigglesite">
+                    <div class="wigglesite_moniter">
+                      <img src="img/mac.png" alt="">
+                      <div class="wigglesitePng"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="Pdevice_desc">
+                  <h3>위글위글 WIGGLEWIGGLE</h3>
+                  <p>
+                    브랜드가 가지고 있는 비비드한 컬러를 살려 리뉴얼 한 사이트입니다.
+
+                  </p>
+                  </br> </br>
+                  <p><b>&nbsp;&nbsp;제작기간 : </b> 14 일 </p>
+                  <p><b>&nbsp;&nbsp;구분 : </b> 반응형 </p>
+                  <p><b>&nbsp;&nbsp;사용언어 : </b> HTML, CSS, JAVASCRIPT </p>
+                  <p><b>&nbsp;&nbsp;참여율 : </b> 100% </p>
+                </div>
+                <div class="web_btn_web1">
+                  <a href="https://wigglewiggle.netlify.app" target="_blank" style="user-select: auto;">Web ver.</a>
+                </div>
+              </div>
+
+
+              <div class="Pdevice Pdevice2">
+                <div class="Pmonitor_wrap2">
+                  <div class="sushisite">
+                    <div class="sushisite_moniter">
+                      <img src="img/mac.png" alt="">
+                      <div class="sushisitePng"></div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="Pdevice_desc">
+                  <h3>반응형 스시 레스토랑 웹사이트</h3>
+                  <p>
+                    &nbsp;&nbsp;CSS와 API 이용하여 스크롤 애니메이션 적용,
+                    GRID, FREX를 이용한 요소</br> &nbsp;&nbsp;적용과
+
+                    &nbsp;&nbsp;JavaScript를 사용하여 다크/라이트 모드 적용을
+                    사용한 반응형 스시 &nbsp;&nbsp;레스토랑 웹사이트 디자인입니다.
+                    </br>
+                  </p>
+                  </br> </br>
+                  <p><b>&nbsp;&nbsp;제작기간 : </b> 10 일 </p>
+                  <p><b>&nbsp;&nbsp;구분 : </b> 반응형 </p>
+                  <p><b>&nbsp;&nbsp;사용언어 : </b> HTML, CSS, JAVASCRIPT </p>
+                  <p><b>&nbsp;&nbsp;참여율 : </b> 100% </p>
+                </div>
+                <div class="web_btn"> <a href="#"
+                  onclick="window.open('https://hitikuchisushi-site.netlify.app','웹 표준 사이트 모바일 전용', 'width=400, height=818, top=100, left=300, resizeable=no' ); event.preventDefault();"
+                  style="user-select:auto;">Mobile ver. </a></div>
+                <div class="web_btn"> <a href="#"
+                  onclick="window.open('https://hitikuchisushi-site.netlify.app','웹 표준 사이트 모바일 전용', 'width=780, height=818, top=100, left=300, resizeable=no' ); event.preventDefault();"
+                  style="user-select:auto;">Tablet ver. </a></div>
+                <div class="web_btn"><a href="https://hitikuchisushi-site.netlify.app" target="_blank" style="user-select: auto;">Web
+                  ver.</a></div>
+              </div>
+
+              <div class="Pdevice Pdevice3">
+                <div class="Pmonitor_wrap3">
+                  <div class="musignsite">
+                    <div class="musignsite_moniter">
+                      <img src="img/mac.png" alt="">
+                      <div class="musignsitePng"></div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="Pdevice_desc">
+                  <h3>반응형 MUSIGN</h3>
+                  <p>
+                    &nbsp;&nbsp;scrolla를 이용하여 애니메이션 효과를 적용시킨 반응형 사이트입니다.
+                  </p>
+                  </br> </br>
+                  <p><b>&nbsp;&nbsp;제작기간 : </b> 7 일 </p>
+                  <p><b>&nbsp;&nbsp;구분 : </b> 반응형 </p>
+                  <p><b>&nbsp;&nbsp;사용언어 : </b> HTML, CSS, JAVASCRIPT </p>
+                  <p><b>&nbsp;&nbsp;참여율 : </b> 100% </p>
+                </div>
+                <div class="web_btn"> <a href="#"
+                  onclick="window.open('https://musing-responsive.netlify.app','웹 표준 사이트 모바일 전용', 'width=400, height=818, top=100, left=300, resizeable=no' ); event.preventDefault();"
+                  style="user-select:auto;">Mobile ver. </a></div>
+                <div class="web_btn">  <a href="#"
+                  onclick="window.open('https://musing-responsive.netlify.app','웹 표준 사이트 모바일 전용', 'width=780, height=818, top=100, left=300, resizeable=no' ); event.preventDefault();"
+                  style="user-select:auto;">Tablet ver. </a> </div>
+                <div class="web_btn"> <a href="https://musing-responsive.netlify.app" target="_blank" style="user-select: auto;">Web
+                  ver.</a> </div>
+              </div>
+
+
+              <div class="Pdevice Pdevice4">
+                <div class="Pmonitor_wrap4">
+                  <div class="megabox">
+                    <div class="megabox_moniter">
+                      <img src="img/mac.png" alt="">
+                      <div class="megaboxPng"></div>
+
+                    </div>
+                  </div>
+                </div>
+                <h1></h1>
+                <div class="Pdevice_desc">
+                  <h3> 반응형 메가박스 MEGABOX</h3>
+                  <p>&nbsp;iframe api를 연결하여 youtube 영상을 재생할 수 있도록 제작하였습니다.<br />
+                    &nbsp;Swiper를 이용한 슬라이더 무비차트와 탭메뉴를 이용한 공지사항 및<br />
+                    해상도에 &nbsp;따른 이미지 적용을 이용한 반응형 웹 사이트입니다.
+                  </p>
+                  </br> </br>
+                  <p><b>&nbsp;제작기간 : </b> 13 일 </p>
+                  <p><b>&nbsp;구분 : </b> 반응형 </p>
+                  <p><b>&nbsp;사용언어 : </b> HTML, CSS, JQUERY </p>
+                  <p><b>&nbsp;참여율 : </b> 100% </p>
+                </div>
+                <div class="web_btn">  <a href="#"
+                  onclick="window.open('https://megaboxmovie.netlify.app','메가박스 모바일 전용', 'width=400, height=818, top=100, left=300, resizeable=no' ); event.preventDefault();"
+                  style="user-select:auto;">Mobile ver. </a></div>
+                <div class="web_btn">  <a href="#"
+                  onclick="window.open('https://megaboxmovie.netlify.app','메가박스 모바일 전용', 'width=780, height=818, top=100, left=300, resizeable=no' ); event.preventDefault();"
+                  style="user-select:auto;">Tablet ver. </a></div>
+                <div class="web_btn">  <a href="https://megaboxmovie.netlify.app" target="_blank" style="user-select: auto;">Web ver.</a></div>
+              </div>
+
+
+              <div class="Pdevice Pdevice5">
+                <div class="Pmonitor_wrap5">
+                  <div class="esponsivesite">
+                    <div class="esponsivesite_moniter">
+                      <img src="img/mac.png" alt="">
+                      <div class="esponsivesitePng"></div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="Pdevice_desc">
+                  <h3>반응형 웹 표준 사이트</h3>
+                  <p> &nbsp;&nbsp;youtube 영상을 inframe태그를 이용하여 연결,CSS3의 transform을
+                    </br>
+                    &nbsp;&nbsp;이용한 마우스오버효과,filter efftect, 해상도에 따른 이미지 적용을
+                    </br>
+                    &nbsp;&nbsp;이용한 웹 사이트 입니다.
+                    </br>
+                  </p>
+                  </br></br>
+                  <p><b>&nbsp;&nbsp;제작기간 : </b> 15 일 </p>
+                  <p><b>&nbsp;&nbsp;구분 : </b> 반응형 </p>
+                  <p><b>&nbsp;&nbsp;사용언어 : </b> HTML, CSS, JAVASCRIPT </p>
+                  <p><b>&nbsp;&nbsp;참여율 : </b> 100% </p>
+                </div>
+                <div class="web_btn">   <a href="#"
+                  onclick="window.open('https://professionalw.netlify.app','웹 표준 사이트 모바일 전용', 'width=400, height=818, top=100, left=300, resizeable=no' ); event.preventDefault();"
+                  style="user-select:auto;">Mobile ver. </a></div>
+                <div class="web_btn">  <a href="#"
+                  onclick="window.open('https://professionalw.netlify.app','웹 표준 사이트 모바일 전용', 'width=780, height=818, top=100, left=300, resizeable=no' ); event.preventDefault();"
+                  style="user-select:auto;">Tablet ver. </a></div>
+                <div class="web_btn"> <a href="https://professionalw.netlify.app" target="_blank" style="user-select: auto;">Web
+                  ver.</a>
+             </div>
+              </div>
+
+              <div class="Pdevice Pdevice6">
+                <div class="Pmonitor_wrap6">
+                  <div class="webstandardsite">
+                    <div class="webstandardsite_moniter">
+                      <img src="img/mac.png" alt="">
+                      <div class="webstandardsitePng"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Pdevice_desc">
+                  <h3>웹 스탠다드 사이트</h3>
+                  <p>
+                    웹 표준방식을 준수하여 만들었고,<br />라이브러리를 첨부해 다양한 기능을 활용하였습니다.
+                  </p>
+                  </br> </br>
+                  <p><b>&nbsp;&nbsp;제작기간 : </b> 10 일 </p>
+                  <p><b>&nbsp;&nbsp;구분 : </b> 반응형 </p>
+                  <p><b>&nbsp;&nbsp;사용언어 : </b> HTML, CSS, JAVASCRIPT </p>
+                  <p><b>&nbsp;&nbsp;참여율 : </b> 100% </p>
+                </div>
+                <div class="web_btn_web1">
+                  <a href="https://webstandard-site.netlify.app" target="_blank" style="user-select: auto;"
+                    class="websitego websitebutton">Web ver.</a>
+                </div>
+              </div>
+
+              <div class="Pdevice Pdevice7">
+                <div class="Pmonitor_wrap7">
+                  <div class="hanacardsite">
+                    <div class="hanacardsite_moniter">
+                      <img src="img/mac.png" alt="">
+                      <div class="hanacardsitePng"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Pdevice_desc">
+                  <h3>하나카드 HANACARD</h3>
+                  <p>
+                    기존의 사이트를 참고하여, 많은 섹션들을 활용하여 제작하였습니다.
+                  </p>
+                  </br> </br>
+                  <p><b>&nbsp;&nbsp;제작기간 : </b> 10 일 </p>
+                  <p><b>&nbsp;&nbsp;구분 : </b> 반응형 </p>
+                  <p><b>&nbsp;&nbsp;사용언어 : </b> HTML, CSS, JAVASCRIPT </p>
+                  <p><b>&nbsp;&nbsp;참여율 : </b> 100% </p>
+                </div>
+                <div class="web_btn_web1">
+                  <a href="https://seeeun-hanacard.netlify.app" target="_blank" style="user-select: auto;"
+                    class="websitego websitebutton">Web ver.</a>
+                </div>
+              </div>
+
+              <div class="Pdevice Pdevice8">
+                <div class="Pmonitor_wrap8">
+                  <div class="bootstrap">
+                    <div class="bootstrap_moniter">
+                      <img src="img/mac.png" alt="">
+                      <div class="bootstrapPng"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Pdevice_desc">
+                  <h3>BOOTSTRAP</h3>
+                  <p>
+                    BOOTSTRAP을 활용해 웹사이트를 제작하였습니다.
+                  </p>
+                  </br> </br>
+                  <p><b>제작기간 : </b> 1 일 </p>
+                  <p><b>브라우저 : </b> CHROME </p>
+                  <p><b>구분 : </b> PC </p>
+                  <p><b>사용언어 : </b> HTML, CSS, BOOTSTRAP </p>
+
+                </div>
+                <div class="web_btn">
+                  <a href="#"
+                    onclick="window.open('https://bootstrapsite12.netlify.app','웹 표준 사이트 모바일 전용', 'width=400, height=818, top=100, left=300, resizeable=no' ); event.preventDefault();"
+                    style="user-select:auto;">Mobile ver. </a>
+                </div>
+                <div class="web_btn">
+                  <a href="#"
+                    onclick="window.open('https://bootstrapsite12.netlify.app','웹 표준 사이트 모바일 전용', 'width=780, height=818, top=100, left=300, resizeable=no' ); event.preventDefault();"
+                    style="user-select:auto;">Tablet ver. </a></div>
+                <div class="web_btn">
+                  <a href="https://bootstrapsite12.netlify.app" target="_blank" style="user-select: auto;">Web
+                    ver.</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="history_page">
+            <em>1</em>/<strong>8</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="endContact" id="endContact" data-10000="opacity:0;transform:translateY(100%) "
+    data-12000="opacity:1; " data-12500="opacity:1; position:fixed; transform:translateY(0%)" data-17000="opacity:1; ">
+    <div class="container clearfix">
+      <div class="left_pr">
+        
+        <div class="yellow_text"
+        data-12800="opacity:0; transform:translateY(-100%)"
+        data-13200="opacity:1;  transform:translateY(0%)"
+        >
+          <img src="img/seeeun yellow 1_text.png" alt="시은">
+        </div>
+   <!--      <div class="circle" data-1800="opacity:0" data-2600="opacity:1"></div>
+        <div class="circle2" data-1800="opacity:0" data-2600="opacity:1"></div> -->
+        <div class="profile_img"
+        data-12500="opacity:0; transform:translateY(-30%)"
+        data-13000="opacity:1;  transform:translateY(0%)"
+        >
+          <img src="img/seeeun yellow 1.png" alt="시은">
+
+          <div class="seeeunSns">
+            <div class="social snsGit"><a href="https://github.com/"target="_blank" style="user-select: auto;"><i class="fab fa-github"></i> GITHIB.</a></div>
+            <div class="social snsInsta"><a href="https://instagram.com/s0eun.ss?igshid=OGQ5ZDc2ODk2ZA=="target="_blank" style="user-select: auto;"><i class="fab fa-instagram"></i> INSTAGRAM.</a></div>
+            <div class="social snsInsta"><a href="https://blog.naver.com/seeeun68" target="_blank" style="user-select: auto;"><i class="fas fa-home"></i> BLOG.</a></div>
+          </div>
+        </div><!-- //profile_img -->
+      </div>
+      <div class="right_pr">
+        <div class="text_area">
+          <div class="cont1 cont"
+          data-13400="opacity:0"
+           data-13800="opacity:1"
+          >
+            <h2><img src="img/icon01.gif" alt="아이콘"></h2>
+            <span class="txtbox"></span>
+            <p>
+              <strong>커뮤니케이션</strong><br><br>
+              개인적인 의견을 내세우기 보다는 상대방의 의견 또한 경청하고 존중하며, 상대방과의 타협점을 찾아 협력해 나가고자 합니다.
+            </p>
+          </div><!-- //cont1 -->
+
+          <div class="cont2 cont"
+          data-13600="opacity:0"
+          data-14000="opacity:1"           
+           >
+            <h2><img src="img/icon02.gif" alt="아이콘"></h2>
+            <span class="txtbox"></span>
+            <p>
+              <strong>스킬업</strong><br><br>
+              배움은 끝이 없다고 생각합니다. 항상 모르는 부분이나, 새롭게 알게 된 부분이 있으면 그냥 넘어가는 것이 아니라 여러번 학습하고 직접 적용을 해보면서 이해하고 배워나가고자 합니다.
+            </p>
+          </div><!-- //cont1 -->
+
+          <div class="cont3 cont" 
+          data-13800="opacity:0"
+          data-14200="opacity:1" >
+            <h2><img src="img/icon04.gif" alt="아이콘"></h2>
+            <span class="txtbox"></span>
+            <p>
+              <strong>창의력 / 독창성</strong><br><br>
+              남들을 따라 만드는 웹 퍼블리셔가 아닌, 나만의 창의적인 디자인으로 남들이 따라 하고싶은 웹을 만드는 웹 퍼블리셔가 되고싶습니다.
+            </p>
+          </div><!-- //cont1 -->
+
+          <div class="cont4 cont" 
+          data-14000="opacity:0"
+          data-14400="opacity:1" 
+          >
+            <h2><img src="img/icon07.gif" alt="아이콘"></h2>
+            <span class="txtbox"></span>
+            <p>
+              <strong>가치관</strong><br><br>
+              나를 위한 디자인이아닌, 사용자가 보다 더 편리하게 사용할 수 있는 웹 디자인과 비장애인/장애인분들 모두 평등하고 쉽게 접근할 수 있도록 웹 접근성을 준수하는 웹 퍼블리셔가 되고싶습니다.
+            </p>
+          </div><!-- //cont1 -->
+        </div><!-- //text_area -->
+      </div>
+    </div>
+
+    <section class="mast">
+      <figure class="mast__bg"></figure>
+      <header class="mast__header">
+        <div class="mast__text js-tit"
+        data-12500="opacity:0; left: 100%"
+        data-13000="opacity:1; left: 30%"
+        
+        >Thank you for viewing My portfolio !</div>
+        <div class="mast__text js-spanize"
+        data-14200="opacity:0"
+          data-14600="opacity:1" >
+          포트폴리오를 끝까지 감상해주셔서 감사합니다!<br />
+          포트폴리오에 대한 피드백이나
+          문의사항이 있으시면 언제든지 연락주세요.<br />
+          감사합니다!</div>
+      </header>
+    </section>
+
+    <div class="footer_txt">
+      <p>
+        본 페이지는 상업용이 아닌 개인 포트폴리오용으로 제작되었습니다.<br>
+        @2023 SeeEun Kim. All rights Reserved.
+      </p>
+    </div>
+  </section>
+
+
+
+</body>
+
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<!-- skrollr -->
+<script src="js/skrollr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrolla/1.0.0/skrolla.min.js"></script>
+<!-- gsap -->
+<script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script> -->
+<!-- Split -->
+<script src='https://assets.codepen.io/16327/SplitText3.min.js'></script>
+<!-- ScrollSmoother -->
+<script src='https://assets.codepen.io/16327/ScrollSmoother.min.js'></script>
+<!-- slick -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<!-- tilt  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+<!-- rgbKineticSlider -->
+<script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/TweenMax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/imagesLoaded.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi-filters.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/rgbKineticSlider.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/loading.js"></script>
+<script src="js/jqueryAction.js"></script>
+<script src="js/rgbKineticSlider.js"></script>
+<script src="js/skillbar.js"></script>
+<script src="js/hobby.js"></script>
+<script src="js/work.js"></script>
+<script src="js/endtext.js"></script>
+<script src="js/tilt.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/workSlick.js"></script>
+<script src="js/main.js"></script>
+
+</html>
